@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import LoadingScreen from "../components/LoadingScreen";
 import Transition from "../components/Transition";
 import { AppProvider } from "../context/AppContext";
+import { Analytics } from "@vercel/analytics/react";
 
 import "../styles/globals.css";
 
@@ -43,6 +44,7 @@ function MyApp({ Component, pageProps }) {
           </AnimatePresence>
         </Layout>
       </motion.div>
+      <Analytics />
     </AppProvider>
   );
 }
