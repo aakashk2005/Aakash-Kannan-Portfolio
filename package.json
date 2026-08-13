@@ -1,0 +1,78 @@
+{
+  "name": "modern-portfolio",
+  "version": "1.0.1",
+  "private": true,
+  "author": {
+    "name": "Aakash Kannan",
+    "email": "aakashkannan05@gmail.com",
+    "url": "https://github.com/aakashk2005"
+  },
+  "description": "Aakash Kannan — UI/UX Designer and Web Developer portfolio showcasing projects, case studies, and services.",
+  "keywords": [
+    "react",
+    "next",
+    "nextjs",
+    "html",
+    "css",
+    "javascript",
+    "js",
+    "modern-ui",
+    "modern-ux",
+    "portfolio",
+    "framer-motion",
+    "3d-website",
+    "particle-effect"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanidhyy/modern-portfolio.git"
+  },
+  "homepage": "https://github.com/sanidhyy/modern-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/sanidhyy/modern-portfolio/issues",
+    "email": "sanidhya.verma12345@gmail.com"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "security:audit": "npm audit"
+  },
+  "dependencies": {
+    "@next/font": "^13.4.4",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "framer-motion": "^10.12.16",
+    "jimp": "^1.6.1",
+    "next": "15.5.21",
+    "react": "18.2.0",
+    "react-countup": "^6.4.2",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-tsparticles": "^2.9.3",
+    "swiper": "^12.1.2",
+    "tailwind-scrollbar": "^3.0.4",
+    "three": "^0.169.0",
+    "tsparticles": "^2.9.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
+    "jsdom": "^29.1.1",
+    "postcss": "^8.5.18",
+    "tailwindcss": "^3.3.2",
+    "vitest": "^4.1.10"
+  }
+}

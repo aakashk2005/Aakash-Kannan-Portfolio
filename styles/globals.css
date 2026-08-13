@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #F13024;
+  --accent-rgb: 241, 48, 36;
+  --font-sora: 'Sora', sans-serif;
+}
+
+.translate-z-0 {
+  transform: translateZ(0px);
+}
+
+/* Hide scrollbars on every page while keeping scroll enabled */
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: #f13024;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #f13024;
+}
+
+@layer base {
+  body {
+    @apply bg-secondary overflow-hidden leading-relaxed;
+    font-family: var(--font-sora);
+  }
+
+  .font-sora {
+    font-family: var(--font-sora);
+  }
+
+  .page {
+    @apply w-full h-screen overflow-hidden;
+    height: 100dvh;
+  }
+
+  .h1 {
+    @apply text-[35px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-semibold;
+  }
+
+  .h2 {
+    @apply text-[35px] leading-tight md:text-[54px] md:leading-[1.3] mb-4 font-semibold;
+  }
+
+  p {
+    @apply leading-[1.8] text-white/60 font-light;
+  }
+
+  .btn,
+  .input {
+    @apply h-[52px];
+  }
+
+  .input {
+    @apply w-full h-[52px] rounded-lg pl-6;
+  }
+
+  .input,
+  .textarea {
+    @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
+  }
+
+  .textarea {
+    @apply w-full h-[180px] p-6 rounded-lg resize-none;
+  }
+}
+
+
+
+/* ── Loading screen animations ───────────────────────────────────── */
+
+/* Ambient blob breathing */
+@keyframes loaderPulse {
+
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1.1;
+    transform: scale(1.09);
+  }
+}
+
+/* Legacy float (retained for compatibility) */
+@keyframes loaderFloat {
+
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.25;
+  }
+
+  50% {
+    transform: translateY(-18px) scale(1.3);
+    opacity: 0.75;
+  }
+}
+
+/* Star twinkling */
+@keyframes starTwinkle {
+
+  0%,
+  100% {
+    opacity: 0.12;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+
+  30% {
+    opacity: 0.95;
+    transform: scale(1.9);
+    filter: blur(0.5px);
+  }
+
+  60% {
+    opacity: 0.4;
+    transform: scale(1.2);
+    filter: blur(0px);
+  }
+}
+
+/* Glitch / chromatic aberration on initials */
+@keyframes glitchShift {
+
+  0%,
+  87%,
+  100% {
+    transform: translate(0, 0) skewX(0deg);
+    clip-path: none;
+  }
+
+  88% {
+    transform: translate(-3px, 1px) skewX(-1deg);
+    clip-path: inset(15% 0 70% 0);
+  }
+
+  90% {
+    transform: translate(3px, -1px) skewX(1deg);
+    clip-path: inset(60% 0 20% 0);
+  }
+
+  92% {
+    transform: translate(-2px, 0) skewX(0deg);
+    clip-path: inset(40% 0 45% 0);
+  }
+
+  94% {
+    transform: translate(0, 0) skewX(0deg);
+    clip-path: none;
+  }
+}
+
+/* Spectrum bars bounce */
+@keyframes specWave {
+
+  0%,
+  100% {
+    height: 3px;
+    opacity: 0.4;
+  }
+
+  50% {
+    height: 18px;
+    opacity: 0.9;
+  }
+}
+
+/* Typewriter cursor blink */
+@keyframes cursorBlink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ── Mobile-specific refinements (desktop is never touched) ─────────── */
+
+/* Let the fixed bottom nav clear iPhone home-indicator safe areas */
+@media (max-width: 767px) {
+  nav {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Comfortable heading sizes on very small screens — content stays inside
+   the viewport and wraps naturally instead of clipping. */
+@media (max-width: 479px) {
+  .h1 {
+    font-size: clamp(26px, 8.5vw, 34px);
+    line-height: 1.2;
+  }
+
+  .h2 {
+    font-size: clamp(23px, 7.2vw, 32px);
+    line-height: 1.2;
+  }
+}
+
+/* ── Mobile single-page stack: keep content visible ──────────────────── */
+
+/* On the stacked home page the section entrance animations (initial
+   opacity: 0 with stagger delays) would leave every section blank for the
+   first couple of seconds, which reads as "content not loading". Force any
+   inline-opacity motion element to fully opaque so text/cards are readable
+   immediately; transform slide-ins still play as a subtle movement. */
+.mobile-stack [style*="opacity"] {
+  opacity: 1 !important;
+}
+
+/* ── Accessibility: Respect reduced-motion user preference ───────────── */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
