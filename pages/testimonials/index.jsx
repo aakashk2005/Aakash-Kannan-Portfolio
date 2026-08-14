@@ -128,7 +128,7 @@ const Achievements = () => {
             exit="hidden"
           >
             <a
-              href="https://drive.google.com/uc?export=download&id=17eLUBKogFyOJ-pcfpykR148zcQBIhSHN"
+              href="https://drive.google.com/file/d/1xjrXGVtKrjtdtHRZKyZahTEOw0NgVQet/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-x-2 px-5 py-2.5 rounded-full border border-white/20 text-xs font-medium hover:bg-white/5 hover:border-accent/40 transition-all duration-300 group"

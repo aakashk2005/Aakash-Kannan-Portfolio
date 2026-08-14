@@ -106,7 +106,7 @@ const Home = () => {
             </Magnetic>
             <Magnetic>
               <a
-                href="https://drive.google.com/uc?export=download&id=17eLUBKogFyOJ-pcfpykR148zcQBIhSHN"
+                href="https://drive.google.com/file/d/1xjrXGVtKrjtdtHRZKyZahTEOw0NgVQet/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 hover:border-white/50 text-white font-medium px-7 py-3.5 rounded-full flex items-center justify-center gap-x-2 transition-all duration-300 hover:bg-white/5 cursor-pointer active:scale-95 select-none w-full sm:w-auto"
