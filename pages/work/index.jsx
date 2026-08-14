@@ -97,11 +97,11 @@ const Work = () => {
   ];
 
   return (
-    <div className="h-full bg-primary/30 overflow-y-auto overflow-x-hidden xl:overflow-hidden flex items-center scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
+    <div className="h-full bg-primary/30 overflow-y-auto overflow-x-hidden xl:overflow-hidden xl:flex xl:items-center scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
       <Circles />
 
       {/* Main Container */}
-      <div className="container mx-auto px-4 xl:px-0 flex flex-col xl:flex-row gap-x-8 gap-y-6 items-center justify-center h-full py-20 xl:py-0 pb-24 xl:pb-0">
+      <div className="container mx-auto px-4 xl:px-0 flex flex-col xl:flex-row gap-x-8 gap-y-6 xl:items-center xl:justify-center h-full py-24 xl:py-0 pb-24 xl:pb-0">
 
         {/* Left Column: Heading & Description */}
         <div className="flex flex-col w-full xl:w-[26%] text-left shrink-0">

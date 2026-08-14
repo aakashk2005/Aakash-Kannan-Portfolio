@@ -88,7 +88,7 @@ const Experience = () => {
   const [hoveredIdx, setHoveredIdx] = useState(null);
 
   return (
-    <div className="h-full bg-primary/30 py-16 xl:py-32 flex items-center justify-center overflow-y-auto overflow-x-hidden xl:overflow-y-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20 relative">
+    <div className="h-full bg-primary/30 py-16 xl:py-32 xl:flex xl:items-center xl:justify-center overflow-y-auto overflow-x-hidden xl:overflow-y-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20 relative">
       <Circles />
 
       {/* Tech Grid Blueprint Overlay */}

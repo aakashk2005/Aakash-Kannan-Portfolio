@@ -63,9 +63,9 @@ const Skills = () => {
   };
 
   return (
-    <div className="h-full bg-primary/30 py-16 xl:py-32 flex items-center overflow-y-auto overflow-x-hidden xl:overflow-y-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
+    <div className="h-full bg-primary/30 py-16 xl:py-32 xl:flex xl:items-center overflow-y-auto overflow-x-hidden xl:overflow-y-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent/20">
       <Circles />
-      <div className="container mx-auto h-full flex flex-col justify-center">
+      <div className="container mx-auto h-full flex flex-col xl:justify-center">
         
         {/* Top Content Row */}
         <div className="flex flex-col xl:flex-row gap-x-12 w-full items-center xl:items-start pb-20 xl:pb-0">
